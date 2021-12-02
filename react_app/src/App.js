@@ -1,7 +1,12 @@
+
 import { Component } from 'react';
-import './App.css';
-import Cards from "./Cards";
+import Navbar from "./Components/Navbar/Navbar";
 import { Jumbotron } from 'reactstrap';
+import Cards from "./Cards";
+import ImageSlider from './Components/ImageSlider';
+import { SliderData } from './Components/SliderData';
+import Accordian from './Components/Accordian';
+import './App.css';
 
 
 
@@ -17,6 +22,7 @@ class App extends Component{
     let cname = "lead";
     return(
       <div>
+        <Navbar />
         <Jumbotron>
           <h1 className = "display-3">My React App</h1>
           <p className = {cname}> This is my first React App</p>
@@ -30,6 +36,8 @@ class App extends Component{
           cardTwoState = {this.cardTwoState}
 
         />
+        <ImageSlider slides={SliderData}/>
+        <Accordian/>
       </div>
     )
   }
