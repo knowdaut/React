@@ -4,9 +4,11 @@ import Navbar from "./Components/Navbar/Navbar";
 import { Jumbotron } from 'reactstrap';
 import './App.css';
 
+let apikey = "af103c190cd36ff3f3fb1e0c135a2ee1";
 
 
 class App extends Component{
+  
   // constructor(props){
   //   super(props);
   //   this.state={
