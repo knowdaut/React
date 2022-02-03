@@ -1,41 +1,10 @@
 
-.card{
-  display: inline-flex;
-  width: 30%;
+.App{
+  background: linear-gradient(#e66465, #9198e5);
 }
 
-.slider{
-  position: relative;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.clock{
+  font-family: ;
+}
 
-}
-.image{
-  width: 500px;
-  height: 500px;
-  border-radius: 10px;
-}
-.right-arrow{
-  position: absolute;
-  top: 50%;
-  right: 32px;
-  font-size: 3rem;
-  color: black;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-
-}
-.left-arrow{
-  position: absolute;
-  top: 50%;
-  left: 32px;
-  font-size: 3rem;
-  color: black;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
 
