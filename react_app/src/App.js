@@ -4,7 +4,6 @@ import { Jumbotron } from 'reactstrap';
 import Clock from "./Clock";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import WebFont from 'webfontloader';
 
 
 let apikey = "af103c190cd36ff3f3fb1e0c135a2ee1";
@@ -24,7 +23,7 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='clock'>
-        <Clock format={'hh-mm'}/>
+          <Clock format={'hh-mm'} />
         </div>
         <div class="d-flex justify-content-md-center align-items-center vh-100">
           <Jumbotron>
