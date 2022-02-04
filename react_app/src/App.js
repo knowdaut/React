@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 // import { Component } from 'react';
 // import Navbar from "./Components/Navbar/Navbar";
 // import { Jumbotron } from 'reactstrap';
@@ -6,30 +5,49 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 
-export default function App() {
 
+let apiKey = 'af103c190cd36ff3f3fb1e0c135a2ee1';
+let latt = 33.44;
+let longg =  -94.04;
+
+
+
+export default function App() {
+  
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      setLat(position.coords.latitude);
-      setLong(position.coords.longitude);
-    });
+    const fetchData = async () => {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      });
 
-    console.log("Latitude is:", lat)
-    console.log("Longitude is:", long)
-  }, [lat, long]);
-
-  console.log("Latitude is:", lat)
-  console.log("Longitude is:", long)
-
+      await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latt}&lon=${longg}&appid=${apiKey}&units=imperial`)
+      .then(res => res.json())
+      .then(result => {
+        setData(result)
+        console.log(result);
+      });
+    }
+    fetchData();
+  }, [lat,long])
+  
   return (
     <div className="App">
-      There is nothing here
+      blahhh
     </div>
   );
 }
+
+// function App(){
+//   console.log("Hello");
+// }
+
+
+
 
 // class App extends Component{
   
@@ -41,6 +59,7 @@ export default function App() {
 //   //   }
 //   // }
 //   render(){
+//     console.log('please work');
 //     let cname = "lead";
 //     return(
 //       <div>
