@@ -2,36 +2,37 @@
 import { Component } from 'react';
 import { Jumbotron } from 'reactstrap';
 import Clock from "./Clock";
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 
 
 let apikey = "af103c190cd36ff3f3fb1e0c135a2ee1";
 
 
 class App extends Component {
-
-  // constructor(props){
-  //   super(props);
-  //   this.state={
-  //     fade1 : false,
-  //     fade2 : false
-  //   }
-  // }
   render() {
-    let cname = "lead";
     return (
-      <div className='App'>
-        <div className='clock'>
+      <div className='App vh-100'>
+        <div className='current'>
           <Clock format={'hh-mm'} />
+          <div className='location'>
+            <center><p>Columbus, GA</p></center>
+          </div>
+          <div className='current-icon'>
+            <center><i class="fas fa-cloud fa-2x"></i></center>
+          </div>
+          <div className='current-temp'>
+            <center><p>63&#176;F</p></center>
+          </div>
         </div>
-        <div class="d-flex justify-content-md-center align-items-center vh-100">
-          <Jumbotron>
-            <h1 className="display-3">Weather app stuff</h1>
-            <p className={cname}> This is my first Weather App</p>
-          </Jumbotron>
+        <div class="d-flex justify-content-center">
+          <div className="input-group">
+            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" className="btn">Search</button>
+          </div>
         </div>
       </div>
+
     )
   }
 }
