@@ -27,7 +27,7 @@ class App extends Component {
         </div>
         <div class="d-flex justify-content-center">
           <div className="input-group">
-            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" className="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
             <button type="button" className="btn">Search</button>
           </div>
         </div>

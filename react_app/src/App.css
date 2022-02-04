@@ -49,15 +49,19 @@
   border: none;
   outline: none;
   box-shadow: none;
+  border-radius: 12px;
 }
 
 .btn{
   border: 2px solid rgb(255, 255, 255, 0.6);
+  border-radius: 12px;
   color: white;
+  font-family: 'Varela Round';
 }
 
 .btn:hover{
   background-color: rgb(255, 255, 255, 0.6);
+  color: rgb(0, 0, 0, 0.6)
 }
 
 
