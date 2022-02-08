@@ -26,7 +26,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className='App vh-100'>
+      <div className='App'>
         <div className='current'>
           <Clock format={'hh-mm'} />
           <div className='location'>
