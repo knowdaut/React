@@ -11,10 +11,7 @@ const Cards = (props) => {
             <Container className="card-container">
                 <Row>
                     <Col>
-                        <Card key="firstCard" 
-                        aria-label='Forecast Information'
-                        onClick={() => props.cardOneState()}
-                        >
+                        <Card key="firstCard" onClick={() => props.cardOneState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Monday</center>
