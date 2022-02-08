@@ -1,0 +1,27 @@
+.card-container{
+    padding: 25px;
+}
+
+.card{
+    background-color: rgb(255, 255, 255, 0.6);
+    margin: 10px;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-body{
+    margin: 25px;
+}
+
+.card-title{
+    color: rgb(0, 0, 0, 0.6);
+    font-family: 'Varela Round';
+    font-weight: bold;
+}
+
+#forecast-icon{
+    color: rgb(0, 0, 0, 0.6);
+    opacity: 0.6;
+  }
