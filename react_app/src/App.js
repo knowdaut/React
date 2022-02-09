@@ -9,7 +9,6 @@ const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
   base: "https://api.openweathermap.org/data/2.5/"
 }
-// let apiKey = 'af103c190cd36ff3f3fb1e0c135a2ee1';
 
 
 
@@ -59,6 +58,7 @@ function App() {
     let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
+    
 
     return `${day} ${date} ${month} ${year}`
     
