@@ -11,6 +11,10 @@
     cursor: pointer;
 }
 
+.card:focus{
+    border:5px solid rgb(0, 0, 255, 0.3)
+}
+
 .card-body{
     margin: 25px;
 }

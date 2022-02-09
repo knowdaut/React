@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Card, CardBody, CardText, CardTitle, Fade, Container, Row, Col } from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Cards.css';
+import './Fontawesome/all.css';
 import TextForCards from "./TextForCards";
 
 
@@ -11,7 +12,9 @@ const Cards = (props) => {
             <Container className="card-container">
                 <Row>
                     <Col>
-                        <Card key="firstCard" onClick={() => props.cardOneState()}>
+                        <Card key="firstCard" 
+                        tabIndex={0}
+                        onClick={() => props.cardOneState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Monday</center>
@@ -28,7 +31,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="secondCard" onClick={() => props.cardTwoState()}>
+                        <Card key="secondCard" 
+                        tabIndex={0}
+                        onClick={() => props.cardTwoState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Tuesday</center>
@@ -45,7 +50,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="thirdCard" onClick={() => props.cardThreeState()}>
+                        <Card key="thirdCard" 
+                        tabIndex={0}
+                        onClick={() => props.cardThreeState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Wednesday</center>
@@ -62,7 +69,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="fourthCard" onClick={() => props.cardFourState()}>
+                        <Card key="fourthCard" 
+                        tabIndex={0}
+                        onClick={() => props.cardFourState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Thursday</center>
@@ -79,7 +88,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="fifthCard" onClick={() => props.cardFiveState()}>
+                        <Card key="fifthCard" 
+                        tabIndex={0}
+                        onClick={() => props.cardFiveState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Friday</center>
