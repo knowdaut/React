@@ -12,9 +12,9 @@ const Cards = (props) => {
             <Container className="card-container">
                 <Row>
                     <Col>
-                        <Card key="firstCard" 
-                        tabIndex={0}
-                        onClick={() => props.cardOneState()}>
+                        <Card key="firstCard"
+                            tabIndex={0}
+                            onClick={() => props.cardOneState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Monday</center>
@@ -22,6 +22,9 @@ const Cards = (props) => {
                                         <center><i class="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
+                                <div>
+                                    <center><p>72&#176;F</p></center>
+                                </div>
                                 <Fade in={props.fade1} className="my-2">
                                     <CardText>
                                         <TextForCards cardNum={1} />
@@ -31,9 +34,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="secondCard" 
-                        tabIndex={0}
-                        onClick={() => props.cardTwoState()}>
+                        <Card key="secondCard"
+                            tabIndex={0}
+                            onClick={() => props.cardTwoState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Tuesday</center>
@@ -41,6 +44,9 @@ const Cards = (props) => {
                                         <center><i class="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
+                                <div>
+                                    <center><p>72&#176;F</p></center>
+                                </div>
                                 <Fade in={props.fade2} className="my-2">
                                     <CardText>
                                         <TextForCards cardNum={2} />
@@ -50,9 +56,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="thirdCard" 
-                        tabIndex={0}
-                        onClick={() => props.cardThreeState()}>
+                        <Card key="thirdCard"
+                            tabIndex={0}
+                            onClick={() => props.cardThreeState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Wednesday</center>
@@ -60,6 +66,9 @@ const Cards = (props) => {
                                         <center><i class="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
+                                <div>
+                                    <center><p>72&#176;F</p></center>
+                                </div>
                                 <Fade in={props.fade3} className="my-2">
                                     <CardText>
                                         <TextForCards cardNum={3} />
@@ -69,9 +78,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="fourthCard" 
-                        tabIndex={0}
-                        onClick={() => props.cardFourState()}>
+                        <Card key="fourthCard"
+                            tabIndex={0}
+                            onClick={() => props.cardFourState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Thursday</center>
@@ -79,6 +88,9 @@ const Cards = (props) => {
                                         <center><i class="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
+                                <div>
+                                    <center><p>72&#176;F</p></center>
+                                </div>
                                 <Fade in={props.fade4} className="my-2">
                                     <CardText>
                                         <TextForCards cardNum={4} />
@@ -88,9 +100,9 @@ const Cards = (props) => {
                         </Card>
                     </Col>
                     <Col>
-                        <Card key="fifthCard" 
-                        tabIndex={0}
-                        onClick={() => props.cardFiveState()}>
+                        <Card key="fifthCard"
+                            tabIndex={0}
+                            onClick={() => props.cardFiveState()}>
                             <CardBody>
                                 <CardTitle>
                                     <center>Friday</center>
@@ -98,6 +110,9 @@ const Cards = (props) => {
                                         <center><i class="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
+                                <div>
+                                    <center><p>72&#176;F</p></center>
+                                </div>
                                 <Fade in={props.fade5} className="my-2">
                                     <CardText>
                                         <TextForCards cardNum={5} />

@@ -4,7 +4,10 @@
 
 .card{
     background-color: rgb(255, 255, 255, 0.6);
-    margin: 10px;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
 }
 
 .card:hover{
@@ -16,7 +19,7 @@
 }
 
 .card-body{
-    margin: 25px;
+    margin: 30px;
 }
 
 .card-title{
