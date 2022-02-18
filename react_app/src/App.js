@@ -3,7 +3,6 @@ import Card from './Cards.js'
 // import './App.css';
 import './App.css';
 import React, { useState } from "react";
-import { render } from '@testing-library/react';
 
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
@@ -16,6 +15,8 @@ function App() {
   const [fade1, setFade1] = useState(false);
   const [fade2, setFade2] = useState(false);
   const [fade3, setFade3] = useState(false);
+  const [fade4, setFade4] = useState(false);
+  const [fade5, setFade5] = useState(false);
   
 
   const [query, setQuery] = useState('');
@@ -70,11 +71,12 @@ function App() {
             <div className='temp'>
               {(weather.main.temp)}
             </div>
-            <div className='weather'>{weather.weather[0].main}</div>
+            <div className='weather'>{weather.weather[0].main}</div> 
           </div>
+          
         ) : ('')}
-        <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} fade1={fade1} fade2={fade2} fade3={fade3}/> 
       </main>
+      <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5}/>
     </div>
   );
 }

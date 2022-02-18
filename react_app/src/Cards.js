@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardText, CardTitle, Fade, Container, Row, Col } from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Cards.css';
+import "./Cards.css";
 import './Fontawesome/all.css';
 import TextForCards from "./TextForCards";
 
