@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Card from './Cards.js' 
 // import './App.css';
 import './App.css';
@@ -76,7 +77,7 @@ function App() {
           
         ) : ('')}
       </main>
-      <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5}/>
+      <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather}/>
     </div>
   );
 }

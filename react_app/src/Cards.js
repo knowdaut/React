@@ -7,6 +7,7 @@ import TextForCards from "./TextForCards";
 
 
 const Cards = (props) => {
+    console.log(props)
     return (
         <div>
             <Container className="card-container">
@@ -19,7 +20,7 @@ const Cards = (props) => {
                                 <CardTitle>
                                     <center>Monday</center>
                                     <span id="forecast-icon">
-                                        <center><i class="fas fa-cloud fa-2x"></i></center>
+                                        <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
                                 <div>
@@ -41,7 +42,7 @@ const Cards = (props) => {
                                 <CardTitle>
                                     <center>Tuesday</center>
                                     <span id="forecast-icon">
-                                        <center><i class="fas fa-cloud fa-2x"></i></center>
+                                        <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
                                 <div>
@@ -63,7 +64,7 @@ const Cards = (props) => {
                                 <CardTitle>
                                     <center>Wednesday</center>
                                     <span id="forecast-icon">
-                                        <center><i class="fas fa-cloud fa-2x"></i></center>
+                                        <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
                                 <div>
@@ -85,7 +86,7 @@ const Cards = (props) => {
                                 <CardTitle>
                                     <center>Thursday</center>
                                     <span id="forecast-icon">
-                                        <center><i class="fas fa-cloud fa-2x"></i></center>
+                                        <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
                                 <div>
@@ -107,7 +108,7 @@ const Cards = (props) => {
                                 <CardTitle>
                                     <center>Friday</center>
                                     <span id="forecast-icon">
-                                        <center><i class="fas fa-cloud fa-2x"></i></center>
+                                        <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
                                 </CardTitle>
                                 <div>
