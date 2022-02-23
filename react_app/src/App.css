@@ -1,9 +1,4 @@
 
-.card{
-  display: inline-flex;
-  width: 30%;
-}
-
 .slider{
   position: relative;
   height: 50vh;
