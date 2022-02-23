@@ -84,30 +84,6 @@ function App() {
             <button type="button" className="btn">Search</button>
           </div>
         </div>
-
-        {/* <div className='search-box'>
-          <input
-            type="text"
-            className="search-bar"
-            placeholder="Search..."
-            onChange = {e => setQuery(e.target.value)}
-            value = {query}
-            onKeyPress = {search}
-          />
-        </div> */}
-        {/* {(typeof weather.main != "undefined") ? (
-          <div>
-            <div className='location-box'>
-              <div className='location'>{weather.name}, {weather.sys.country}</div>
-              <div className='date'>{dateBuilder(new Date())}</div>
-            </div>
-            <div className='temp'>
-              {(weather.main.temp)}
-            </div>
-            <div className='weather'>{weather.weather[0].main}</div> 
-          </div>
-          
-        ) : ('')} */}
       </main>
       <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather} />
     </div>
