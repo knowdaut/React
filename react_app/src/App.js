@@ -66,7 +66,7 @@ function App() {
               onKeyPress={search}
               aria-label="Search"
               aria-describedby="search-addon" />
-            <button type="button" className="btn">Search</button>
+            <button type="button" className="btn" onClick={search}>Search</button>
           </div>
         </div>
         {(typeof weather.main != "undefined") ? (
