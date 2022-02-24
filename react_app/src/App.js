@@ -40,7 +40,7 @@ function App() {
     let year = d.getFullYear();
 
 
-    return `${day} ${date} ${month} ${year}`
+    return `${date} ${month} ${year}`
 
 
   }
@@ -67,7 +67,6 @@ function App() {
                 {dateBuilder(new Date())}
                 </center>
               </div>
-              
             </div>
           </div>
         ) : ('')}
