@@ -18,7 +18,7 @@ function App() {
   const [weather, setWeather] = useState({});
 
   const search = evt => {
-    if (evt.key === "Enter") {
+    //if (evt.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
@@ -26,7 +26,7 @@ function App() {
           setQuery('');
           console.log(result);
         });
-    }
+    //}
   }
 
   const dateBuilder = (d) => {
@@ -63,7 +63,7 @@ function App() {
               placeholder="Search"
               onChange={e => setQuery(e.target.value)}
               value={query}
-              onKeyPress={search}
+              onKeyPress={(evt) => {if(evt.key === "Enter") {search()}}}
               aria-label="Search"
               aria-describedby="search-addon" />
             <button type="button" className="btn" onClick={search}>Search</button>

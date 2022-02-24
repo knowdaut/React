@@ -24,7 +24,7 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>72&#176;F</p></center>
+                                    <center><p>{props.weather.main.temp}</p></center>
                                 </div>
                                 <Fade in={props.fade1} className="my-2">
                                     <CardText>
