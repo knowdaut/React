@@ -44,33 +44,18 @@ function App() {
 
 
   }
-  
+
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 60) ? 'App hot' : 'App') : 'App'}>
       <main>
-        {(typeof weather.main != "undefined") ? (
-          <div>
-            <div className='current'>
-              <Clock format={'hh-mm'} />
-              <div className='location'>
-                <center>
-                  {weather.name}, {weather.sys.country}
-                </center>
-              </div>
-              <div className='current-icon'>
-                <center><i class="fas fa-cloud fa-2x"></i></center>
-              </div>
-              <div className='current-temp'>
-                <center>{Math.round(weather.main.temp)}&#176;F</center>
-              </div>
-              <div className="location">
-                <center>
-                {dateBuilder(new Date())}
-                </center>
-              </div>
-            </div>
+        <div className="current">
+          <Clock format={'hh-mm'} />
+          <div className="date">
+            <center>
+              {dateBuilder(new Date())}
+            </center>
           </div>
-        ) : ('')}
+        </div>
         <div class="d-flex justify-content-center">
           <div className="input-group">
             <input type="search"
@@ -84,8 +69,49 @@ function App() {
             <button type="button" className="btn">Search</button>
           </div>
         </div>
+        {(typeof weather.main != "undefined") ? (
+          <div>
+            <div className='current'>
+              <div className='location'>
+                <center>
+                  {weather.name}, {weather.sys.country}
+                </center>
+              </div>
+              <div className='current-icon'>
+                <center><i class="fas fa-cloud fa-2x"></i></center>
+              </div>
+              <div className='current-temp'>
+                <center>{Math.round(weather.main.temp)}&#176;F</center>
+              </div>
+              <center>
+                <div className="current-box">
+                  <div className="feels">
+                    <span id="current-conditions">
+                    {Math.round(weather.main.feels_like)}&#176;F
+                    </span>
+                    <p>Feels Like</p>
+                  </div>
+                  <div className="humidity">
+                  <span id="current-conditions">
+                  {Math.round(weather.main.humidity)}%
+                  </span>
+                  <p>Humidity</p>
+                  </div>
+                  <div className="wind">
+                  <span id="current-conditions">
+                  {Math.round(weather.wind.speed)} mph
+                  </span>
+                  <p>Wind</p>
+                  </div>
+                </div>
+              </center>
+
+            </div>
+          </div>
+        ) : ('')}
+
       </main>
-      <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather} />
+      {/* <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather} /> */}
     </div>
   );
 }

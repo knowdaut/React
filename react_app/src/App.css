@@ -20,6 +20,13 @@ p{
   padding: 20px;
 }
 .current .location{
+  font-family: 'Varela Round';
+  font-size: xx-large;
+  color: white;
+  margin: 10px;
+}
+
+.date{
   font-family: 'Lato';
   font-size: large;
   color: white;
@@ -36,6 +43,31 @@ p{
   color: white;
   margin: 25px;
   font-family: 'Varela Round';
+}
+
+.current-box{
+  font-family: "Lato";
+  font-size: medium;
+  color: white;
+  background-color: rgb(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 15px;
+  margin: 0px;
+  border: 2px solid rgb(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .current-box{
+    width: 50%;
+  }
+}
+
+#current-conditions{
+  font-family: 'Varela Round';
+  font-size: large;
+  font-weight: bold;
 }
 
 .input-group{
