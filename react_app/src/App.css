@@ -1,13 +1,17 @@
 
 .App{
-  background: linear-gradient(#d0ecff,#2527ac);
+  background: linear-gradient(#ff9090,#ac258a);
   padding: 25px;
   min-height: 100vh;
-  transition: 0.4s ease-in;
+  transition: background ease 10s;
 }
 
 .App.hot{
   background: linear-gradient(#ffc56f, #b63229);
+}
+
+.App.cold{
+  background: linear-gradient(#d0ecff, #2527ac);
 }
 
 p{
