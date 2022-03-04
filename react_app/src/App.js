@@ -16,6 +16,7 @@ function App() {
 
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
+  const [weather2, setWeather2] = useState({});
 
   const search = evt => {
     //if (evt.key === "Enter") {
@@ -23,8 +24,17 @@ function App() {
         .then(res => res.json())
         .then(result => {
           setWeather(result);
-          setQuery('');
+          // setQuery('');
           console.log(result);
+          if(result.cod === 200){
+            fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
+            .then(res2 => res2.json())
+            .then(result2 => {
+              console.log(result2)
+              setWeather2(result2);
+              setQuery('');
+            })
+          }
         });
     //}
   }
@@ -114,7 +124,7 @@ function App() {
 
       </main>
       {(typeof weather.main != "undefined") ? (
-        <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather} />
+        <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather} weather2={weather2} />
       ) : ('')}
 
     </div>
