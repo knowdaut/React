@@ -5,7 +5,13 @@ import "./Cards.css";
 import './Fontawesome/all.css';
 import TextForCards from "./TextForCards";
 
-
+function myConverter(utcTime){
+    var d = new Date(0);
+    d.setUTCSeconds(utcTime)
+    console.log(d.getDay())
+    return d;
+}
+myConverter(1646743006);
 const Cards = (props) => {
     console.log(props)
     return (
@@ -18,7 +24,7 @@ const Cards = (props) => {
                             onClick={() => props.cardOneState()}>
                             <CardBody>
                                 <CardTitle>
-                                    <center>Monday</center>
+                                    <center></center>
                                     <span id="forecast-icon">
                                         <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
