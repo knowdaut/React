@@ -5,26 +5,61 @@ import "./Cards.css";
 import './Fontawesome/all.css';
 import TextForCards from "./TextForCards";
 
-function myConverter(utcTime){
+function utcConverter(utcTime){
     var d = new Date(0);
     d.setUTCSeconds(utcTime)
-    console.log(d.getDay())
-    return d;
+    var d2 = d.getDay()
+    return d2;
 }
-myConverter(1646743006);
+
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+function dayConverter(dayNum){
+    console.log(days[dayNum])
+    return days[dayNum]
+}
+
 const Cards = (props) => {
-    console.log(props)
+    var cardStorage = []
+    if(typeof props.weather2 != "undefined" && props.weather2.daily){
+        props.weather2.daily.forEach(daily => {
+            cardStorage.push(
+            <Col>
+                <Card key="firstCard"
+                    tabIndex={0}
+                    onClick={() => props.cardOneState()}>
+                    <CardBody>
+                        <CardTitle>
+                            <center>{dayConverter(utcConverter(daily.dt))}</center>
+                            <span id="forecast-icon">
+                                <center><i className="fas fa-cloud fa-2x"></i></center>
+                            </span>
+                        </CardTitle>
+                        <div>
+                            <center><p>{props.weather.main.temp}</p></center>
+                        </div>
+                        <Fade in={props.fade1} className="my-2">
+                            <CardText>
+                                <TextForCards cardNum={1} />
+                            </CardText>
+                        </Fade>
+                    </CardBody>
+                </Card>
+            </Col>
+            )
+        })
+    }
     return (
         <div>
             <Container className="card-container">
                 <Row>
-                    <Col>
+                    {cardStorage}
+                    {/* <Col>
                         <Card key="firstCard"
                             tabIndex={0}
                             onClick={() => props.cardOneState()}>
                             <CardBody>
                                 <CardTitle>
-                                    <center></center>
+                                    <center>{(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[0].dt)) : " error "}</center>
                                     <span id="forecast-icon">
                                         <center><i className="fas fa-cloud fa-2x"></i></center>
                                     </span>
@@ -127,7 +162,7 @@ const Cards = (props) => {
                                 </Fade>
                             </CardBody>
                         </Card>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
         </div>
