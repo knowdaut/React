@@ -4,7 +4,8 @@ import React, { useState } from "react";
 
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
-  base: "https://api.openweathermap.org/data/2.5/"
+  base: "https://api.openweathermap.org/data/2.5/",
+  icon: "http://openweathermap.org/img/w/10d.png"
 }
 
 function App() {
@@ -20,22 +21,22 @@ function App() {
 
   const search = evt => {
     //if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
-        .then(res => res.json())
-        .then(result => {
-          setWeather(result);
-          // setQuery('');
-          console.log(result);
-          if(result.cod === 200){
-            fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
+    fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
+      .then(res => res.json())
+      .then(result => {
+        setWeather(result);
+        // setQuery('');
+        console.log(result);
+        if (result.cod === 200) {
+          fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
             .then(res2 => res2.json())
             .then(result2 => {
               console.log(result2)
               setWeather2(result2);
               setQuery('');
             })
-          }
-        });
+        }
+      });
     //}
   }
 
@@ -73,7 +74,7 @@ function App() {
               placeholder="Search"
               onChange={e => setQuery(e.target.value)}
               value={query}
-              onKeyPress={(evt) => {if(evt.key === "Enter") {search()}}}
+              onKeyPress={(evt) => { if (evt.key === "Enter") { search() } }}
               aria-label="Search"
               aria-describedby="search-addon" />
             <button type="button" className="btn" onClick={search}>Search</button>
@@ -87,12 +88,16 @@ function App() {
                   {weather.name}, {weather.sys.country}
                 </center>
               </div>
-              <div className='current-icon'>
-                <center><i class="fas fa-cloud fa-2x"></i></center>
-              </div>
               <div className='current-temp'>
                 <center>{Math.round(weather.main.temp)}&#176;F</center>
               </div>
+              <div className='current-description'>
+                <center>{weather.weather[0].main}</center>
+                <div className='icon'>
+                  <center><img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} /></center>
+                </div>
+              </div>
+
               <center>
                 <div className="current-box">
                   <div className="feels">

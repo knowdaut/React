@@ -37,15 +37,21 @@ p{
   margin: 10px;
 }
 
-.current-icon{
+.icon{
+  height: 100%;
+}
+
+.current-description{
+  font-family: 'Lato';
+  font-size: x-large;
   color: white;
-  opacity: 0.6;
+
 }
 
 .current-temp{
   font-size: 60px;
   color: white;
-  margin: 25px;
+  margin: 35px;
   font-family: 'Varela Round';
 }
 
