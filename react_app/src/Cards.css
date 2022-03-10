@@ -31,3 +31,8 @@
     color: rgb(0, 0, 0, 0.6);
     opacity: 0.6;
   }
+
+img{
+    height: 75px;
+    width: auto;
+  }
