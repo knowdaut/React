@@ -3,19 +3,42 @@
   background: linear-gradient(#ff9090,#ac258a);
   padding: 25px;
   min-height: 100vh;
-  transition: background ease 10s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* transition: background ease 10s; */
 }
 
-.App.hot{
-  background: linear-gradient(#ffc56f, #b63229);
+.App.clouds{
+  background-image: url(/src/Backgrounds/clouds.gif);
 }
 
-.App.cold{
-  background: linear-gradient(#d0ecff, #2527ac);
+.App.clear{
+  background-image: url(/src/Backgrounds/clear.gif), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+  background-blend-mode: overlay;
+}
+
+.App.rain{
+  background-image: url(/src/Backgrounds/rain.gif);
+}
+
+.App.snow{
+  background-image: url(/src/Backgrounds/snow.gif);
+}
+
+.App.thunderstorm{
+  background-image: url(/src/Backgrounds/thunderstorm.gif);
+}
+
+.App.fog{
+  background-image: url(/src/Backgrounds/fog.gif);
 }
 
 p{
   font-family: 'Lato';
+}
+
+#xl-font{
+  font-size: x-large;
 }
 
 .current{
@@ -37,15 +60,21 @@ p{
   margin: 10px;
 }
 
-.current-icon{
+.icon{
+  height: 100%;
+}
+
+.current-description{
+  font-family: 'Lato';
+  font-size: large;
   color: white;
-  opacity: 0.6;
+
 }
 
 .current-temp{
   font-size: 60px;
   color: white;
-  margin: 25px;
+  margin: 35px;
   font-family: 'Varela Round';
 }
 
@@ -54,11 +83,9 @@ p{
   font-size: medium;
   color: white;
   background-color: rgb(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-evenly;
   width: 100%;
   padding: 15px;
-  margin: 0px;
+  margin-bottom: 15px;
   border: 2px solid rgb(255, 255, 255, 0.6);
   border-radius: 12px;
 }
@@ -71,6 +98,24 @@ p{
   .current-box{
     width: 60%;
   }
+}
+
+.current-info{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+img{
+  height: 75px;
+  width: auto;
+}
+
+#conditions-info{
+  margin-bottom: 15px;
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  font-family: 'Varela Round';
 }
 
 #current-conditions{
@@ -91,19 +136,12 @@ p{
 .form-control{
   font-family: 'Lato';
   color: white;
-  border: none;
-  background: none;
-  border-bottom: 2px solid rgb(255, 255, 255, 0.6);
-  padding: 25px;
-  border-radius: 0px;
-}
-
-.form-control:focus{
   background-color: rgb(255, 255, 255, 0.6);
   border: none;
   outline: none;
   box-shadow: none;
   border-radius: 12px;
+  padding: 25px;
 }
 
 .btn{

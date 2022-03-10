@@ -65,7 +65,7 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>{props.weather.main.temp}</p></center>
+                                    <center><p>{Math.round(props.weather.main.temp)}&#176;F</p></center>
                                 </div>
                                 <Fade in={props.fade1} className="my-2">
                                     <CardText>
@@ -87,7 +87,7 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>{(typeof props.weather2 != "undefined") && props.weather2.current ? props.weather2.daily[2].temp.day : " error "}</p></center>
+                                    <center><p>{(typeof props.weather2 != "undefined") && props.weather2.current ? Math.round(props.weather2.daily[2].temp.day) : " error "}&#176;F</p></center>
                                 </div>
                                 <Fade in={props.fade2} className="my-2">
                                     <CardText>
@@ -109,7 +109,7 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>72&#176;F</p></center>
+                                    <center><p>{(typeof props.weather2 != "undefined") && props.weather2.current ? Math.round(props.weather2.daily[3].temp.day) : " error "}&#176;F</p></center>
                                 </div>
                                 <Fade in={props.fade3} className="my-2">
                                     <CardText>
@@ -131,7 +131,7 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>72&#176;F</p></center>
+                                    <center><p>{(typeof props.weather2 != "undefined") && props.weather2.current ? Math.round(props.weather2.daily[4].temp.day) : " error "}&#176;F</p></center>
                                 </div>
                                 <Fade in={props.fade4} className="my-2">
                                     <CardText>
@@ -153,7 +153,7 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>72&#176;F</p></center>
+                                    <center><p>{(typeof props.weather2 != "undefined") && props.weather2.current ? Math.round(props.weather2.daily[5].temp.day) : " error "}&#176;F</p></center>
                                 </div>
                                 <Fade in={props.fade5} className="my-2">
                                     <CardText>
