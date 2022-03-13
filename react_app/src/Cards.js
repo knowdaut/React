@@ -32,7 +32,7 @@ const Cards = (props) => {
                                 <CardTitle>
                                     <center>{dayConverter(utcConverter(daily.dt))}</center>
                                     <span id="forecast-icon">
-                                        <center><i className="fas fa-cloud fa-2x"></i></center>
+                                        <center>{(typeof props.weather2 != "undefined") && props.weather2.current ? <img src={`http://openweathermap.org/img/w/${daily.weather[0].icon}.png`} /> : " error "}</center>
                                     </span>
                                 </CardTitle>
                                 <div>
