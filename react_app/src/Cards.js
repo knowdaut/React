@@ -1,28 +1,47 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Card, CardBody, CardText, CardTitle, Fade, Container, Row, Col } from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
 import './Fontawesome/all.css';
 import TextForCards from "./TextForCards";
 
-function utcConverter(utcTime){
+function utcConverter(utcTime) {
     var d = new Date(0);
     d.setUTCSeconds(utcTime)
     var d2 = d.getDay()
     return d2;
 }
 
+
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-function dayConverter(dayNum){
+function dayConverter(dayNum) {
     console.log(days[dayNum])
     return days[dayNum]
 }
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
 const Cards = (props) => {
     var cardStorage = []
-    if(typeof props.weather2 != "undefined" && props.weather2.daily){
+
+    // const [expanded, setExpanded] = useState(false);
+    // const [accodionHeight, setAccodionHeight] = useState(0);
+    // const ref = useRef(null);
+
+    // const open = () => setExpanded(!expanded);
+
+    // useEffect(() => {
+    //     const getHeight = ref.current.scrollHeight;
+    //     setAccodionHeight(getHeight);
+    // }, [expanded]);
+
+    if (typeof props.weather2 != "undefined" && props.weather2.daily) {
         props.weather2.daily.forEach((daily, index) => {
-            if(index > 0 && index < 6){
+            if (index > 0 && index < 6) {
                 cardStorage.push(
                     <Col>
                         <Card key="firstCard"
@@ -36,17 +55,20 @@ const Cards = (props) => {
                                     </span>
                                 </CardTitle>
                                 <div>
-                                    <center><p>{daily.temp.day}</p></center>
+                                    <center>
+                                        <p>{toTitleCase(daily.weather[0].description)}</p>
+                                        <p>{Math.round(daily.temp.day)}&#176;F</p>
+                                    </center>
                                 </div>
                                 <Fade in={props.fade1} className="my-2">
                                     <CardText>
-                                        <TextForCards cardNum={1} daily={daily}/>
+                                        <TextForCards cardNum={1} daily={daily} />
                                     </CardText>
                                 </Fade>
                             </CardBody>
                         </Card>
                     </Col>
-                    )
+                )
             }
         })
     }

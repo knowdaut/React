@@ -1,6 +1,6 @@
 import Clock from "./Clock";
 import Card from './Cards.js'
-import React, { useState } from "react";
+import React, { useState} from "react";
 
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
@@ -19,7 +19,7 @@ function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
   const [weather2, setWeather2] = useState({});
-
+  
   const search = evt => {
     //if (evt.key === "Enter") {
     fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
