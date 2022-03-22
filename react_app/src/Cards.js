@@ -32,27 +32,27 @@ const Cards = (props) => {
     const [isOpen3, setIsOpen3] = useState(false);
     const [isOpen4, setIsOpen4] = useState(false);
     const [isOpen5, setIsOpen5] = useState(false);
-    const [setActive, setActiveState] = useState("active");
-    const [setRotate, setRotateState] = useState("arrow");
+    // const [setActive, setActiveState] = useState("active");
+    // const [setRotate, setRotateState] = useState("arrow");
 
-    function rotateArrow(){
-        setActiveState(setActive === "" ? "active" : "") 
-        setRotateState(
-            setActive === "active" ? "rotate-arrow" : "arrow"
-        );
-    }
+    // function rotateArrow(){
+    //     setActiveState(setActive === "" ? "active" : "") 
+    //     setRotateState(
+    //         setActive === "active" ? "rotate-arrow" : "arrow"
+    //     );
+    // }
 
     return (
         <div>
             <Container className="card-container">
                 <Col>
                     <Row>
-                        <Card key="firstCard" tabIndex={0} onClick={() => { setIsOpen1(!isOpen1); rotateArrow()}}>
+                        <Card key="firstCard" tabIndex={0} onKeyPress={(evt) => { if (evt.key === "Enter") { setIsOpen1(!isOpen1) } }} onClick={() => { setIsOpen1(!isOpen1)}}>
                             <CardBody>
                                 <center>
                                 <CardTitle>
                                     {(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[1].dt)) : " "}
-                                    <Chevron className={`${setRotate}`} width={7} fill={"#777"} />
+                                    {/* <Chevron className={`${setRotate}`} width={7} fill={"#777"} /> */}
                                 </CardTitle>
                                 </center>
                                 <Collapse isOpen={isOpen1}>
@@ -70,12 +70,13 @@ const Cards = (props) => {
                         </Card>
                     </Row>
                     <Row>
-                        <Card key="secondCard" tabIndex={0} onClick={() => { setIsOpen2(!isOpen2); rotateArrow() }}>
+                        <Card key="secondCard" tabIndex={0} onKeyPress={(evt) => { if (evt.key === "Enter") { setIsOpen2(!isOpen2) } }} onClick={() => { setIsOpen2(!isOpen2)}}>
                             <CardBody>
                                 <center>
                                 <CardTitle>
-                                    {(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[2].dt)) : " "}                              
-                                    <Chevron className={`${setRotate}`} width={7} fill={"#777"} />
+                                    {(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[2].dt)) : " "}
+                                                                  
+                                    {/* <Chevron className={`${setRotate}`} width={7} fill={"#777"} /> */}
                                 </CardTitle>
                                 </center>
                                 <Collapse isOpen={isOpen2}>
@@ -94,12 +95,12 @@ const Cards = (props) => {
                         </Card>
                     </Row>
                     <Row>
-                        <Card key="thirdCard" tabIndex={0} onClick={() => { setIsOpen3(!isOpen3); rotateArrow() }}>
+                        <Card key="thirdCard" tabIndex={0} onKeyPress={(evt) => { if (evt.key === "Enter") { setIsOpen3(!isOpen3) } }}onClick={() => { setIsOpen3(!isOpen3)}}>
                             <CardBody>
                                 <center>
                                 <CardTitle>
                                     {(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[3].dt)) : " "}
-                                    <Chevron className={`${setRotate}`} width={7} fill={"#777"} />
+                                    {/* <Chevron className={`${setRotate}`} width={7} fill={"#777"} /> */}
                                 </CardTitle>
                                 </center>
                                 <Collapse isOpen={isOpen3}>
@@ -118,12 +119,12 @@ const Cards = (props) => {
                         </Card>
                     </Row>
                     <Row>
-                        <Card key="fourthCard" tabIndex={0} onClick={() => { setIsOpen4(!isOpen4); rotateArrow() }}>
+                        <Card key="fourthCard" tabIndex={0} onKeyPress={(evt) => { if (evt.key === "Enter") { setIsOpen4(!isOpen4) } }} onClick={() => { setIsOpen4(!isOpen4)}}>
                             <CardBody>
                                 <center>
                                 <CardTitle>
                                     {(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[4].dt)) : " "}
-                                    <Chevron className={`${setRotate}`} width={7} fill={"#777"} />
+                                    {/* <Chevron className={`${setRotate}`} width={7} fill={"#777"} /> */}
                                 </CardTitle>
                                 </center>
                                 <Collapse isOpen={isOpen4}>
@@ -141,12 +142,12 @@ const Cards = (props) => {
                         </Card>
                     </Row>
                     <Row>
-                        <Card key="fifthCard" tabIndex={0} onClick={() => { setIsOpen5(!isOpen5); rotateArrow() }}>
+                        <Card key="fifthCard" tabIndex={0} onKeyPress={(evt) => { if (evt.key === "Enter") { setIsOpen5(!isOpen5) } }} onClick={() => { setIsOpen5(!isOpen5)}}>
                             <CardBody>
                                 <center>
                                 <CardTitle>
                                     {(typeof props.weather2 != "undefined") && props.weather2.current ? dayConverter(utcConverter(props.weather2.daily[5].dt)) : " "}
-                                    <Chevron className={`${setRotate}`} width={7} fill={"#777"} />
+                                    {/* <Chevron className={`${setRotate}`} width={7} fill={"#777"} /> */}
                                 </CardTitle>
                                 </center>
                                 <Collapse isOpen={isOpen5}>
