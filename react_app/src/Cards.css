@@ -4,7 +4,7 @@
 
 .card{
     background-color: rgb(255, 255, 255, 0.6);
-    height: 10%;
+    height: auto;
     width: 100%;
 }
 
@@ -25,12 +25,9 @@
     color: rgb(0, 0, 0, 0.6);
     font-family: 'Varela Round';
     font-weight: bold;
+    margin: 0px;
+    padding: 0px;
 }
-
-#forecast-icon{
-    color: rgb(0, 0, 0, 0.6);
-    opacity: 0.6;
-  }
 
 img{
     height: 50px;

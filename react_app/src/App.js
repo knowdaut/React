@@ -10,11 +10,11 @@ const api = {
 
 
 function App() {
-  const [fade1, setFade1] = useState(false);
-  const [fade2, setFade2] = useState(false);
-  const [fade3, setFade3] = useState(false);
-  const [fade4, setFade4] = useState(false);
-  const [fade5, setFade5] = useState(false);
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
+  const [open4, setOpen4] = useState(false);
+  const [open5, setOpen5] = useState(false);
 
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -147,7 +147,7 @@ function App() {
         ) : ('')}
       </main>
       {(typeof weather.main != "undefined") ? (
-        <Card cardOneState={() => setFade1(!fade1)} cardTwoState={() => setFade2(!fade2)} cardThreeState={() => setFade3(!fade3)} cardFourState={() => setFade4(!fade4)} cardFiveState={() => setFade5(!fade5)} fade1={fade1} fade2={fade2} fade3={fade3} fade4={fade4} fade5={fade5} weather={weather} weather2={weather2} />
+        <Card cardOneState={() => setOpen1(!open1)} cardTwoState={() => setOpen2(!open2)} cardThreeState={() => setOpen3(!open3)} cardFourState={() => setOpen4(!open4)} cardFiveState={() => setOpen5(!open5)} open1={open1} open2={open2} open3={open3} open4={open4} open5={open5} weather={weather} weather2={weather2} />
       ) : ('')}
 
     </div>
