@@ -1,6 +1,16 @@
 .card-container{
-    padding: 0px;
+    width: 100%;
 }
+@media (min-width: 768px){
+    .card-container{
+      width: 60%;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px){
+    .card-container{
+      width: 100%;
+    }
+  }
 
 .card{
     background-color: rgb(255, 255, 255, 0.6);
@@ -10,6 +20,7 @@
 
 .card:hover{
     cursor: pointer;
+    background-color: rgb(255, 255, 255, 0.8);
 }
 
 .card:focus{
@@ -33,3 +44,11 @@ img{
     height: 50px;
     width: auto;
   }
+
+.arrow{
+    margin-left: 2px;
+}
+.rotate-arrow{
+    margin-left: 2px;
+    transform:rotate(90deg);
+}
