@@ -17,11 +17,12 @@
     "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1",
     "webfontloader": "^1.6.28"
+
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
