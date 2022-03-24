@@ -54,14 +54,15 @@ function App() {
   }
 
   return (
-    <div className={(typeof weather.main != "undefined") ?
-      (weather.weather[0].main === "Clouds" ? 'App clouds' :
-        (weather.weather[0].main === "Clear" ? 'App clear' :
-          (weather.weather[0].main === "Rain" ? 'App rain' :
-            (weather.weather[0].main === "Snow" ? 'App snow' :
-              (weather.weather[0].main === "Thunderstorm" ? 'App thunderstorm' :
-                (weather.weather[0].main === "Fog" ? 'App fog' : 'App'))))))
-      : 'App'}>
+    // <div className={(typeof weather.main != "undefined") ?
+    //   (weather.weather[0].main === "Clouds" ? 'App clouds' :
+    //     (weather.weather[0].main === "Clear" ? 'App clear' :
+    //       (weather.weather[0].main === "Rain" ? 'App rain' :
+    //         (weather.weather[0].main === "Snow" ? 'App snow' :
+    //           (weather.weather[0].main === "Thunderstorm" ? 'App thunderstorm' :
+    //             (weather.weather[0].main === "Fog" ? 'App fog' : 'App'))))))
+    //   : 'App'}>
+    <div className={(typeof weather.main != "undefined") ? `App ${weather.weather[0].main}` : 'App'}>
       <main>
         <div className="current">
           <Clock format={'hh-mm'} />

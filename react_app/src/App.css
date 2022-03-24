@@ -8,28 +8,28 @@
   /* transition: background ease 10s; */
 }
 
-.App.clouds{
+.App.Clouds{
   background-image: url(/src/Backgrounds/clouds.gif);
 }
 
-.App.clear{
+.App.Clear{
   background-image: url(/src/Backgrounds/clear.gif), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
   background-blend-mode: overlay;
 }
 
-.App.rain{
+.App.Rain{
   background-image: url(/src/Backgrounds/rain.gif);
 }
 
-.App.snow{
+.App.Snow{
   background-image: url(/src/Backgrounds/snow.gif);
 }
 
-.App.thunderstorm{
+.App.Thunderstorm{
   background-image: url(/src/Backgrounds/thunderstorm.gif);
 }
 
-.App.fog{
+.App.Fog{
   background-image: url(/src/Backgrounds/fog.gif);
 }
 
