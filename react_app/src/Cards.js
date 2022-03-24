@@ -1,21 +1,19 @@
 import React, {useState} from "react";
 import { Collapse, Card, CardBody, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
-// import Chevron from "./Chevron.js";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
-// import TextForCards from "./TextForCards";
 
 function utcConverter(utcTime) {
-    var d = new Date(0);
+    let d = new Date(0);
     d.setUTCSeconds(utcTime)
     var d2 = d.getDay()
     return d2;
 }
 
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function dayConverter(dayNum) {
-    console.log(days[dayNum])
     return days[dayNum]
 }
 
