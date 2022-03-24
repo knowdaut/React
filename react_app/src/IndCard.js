@@ -25,7 +25,7 @@ const IndCard = (props) => {
                         </span>
                     </CardTitle>
                     <div>
-
+                            <i key={openState} className={`fas ${openState ? 'fa-chevron-up' : 'fa-chevron-down'}`}/>
                             {toTitleCase(daily.weather[0].description)}
                             {Math.round(daily.temp.day)}&#176;F
 
