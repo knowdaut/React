@@ -16,12 +16,10 @@ function App() {
   const [weather2, setWeather2] = useState({});
   
   const search = evt => {
-    //if (evt.key === "Enter") {
     fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
       .then(res => res.json())
       .then(result => {
         setWeather(result);
-        // setQuery('');
         console.log(result);
         if (result.cod === 200) {
           fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
@@ -33,15 +31,12 @@ function App() {
             })
         }
       });
-    //}
   }
 
   const dateBuilder = (d) => {
-    // let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    let months = ["January", "February", "March", "April", "May", "June", "July",
+    const months = ["January", "February", "March", "April", "May", "June", "July",
       "August", "September", "October", "November", "December"];
 
-    // let day = days[d.getDay()];
     let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
@@ -139,11 +134,11 @@ function App() {
             </div>
             
           </div>
-        ) : ('')}
+        ) : null}
       </main>
       {(typeof weather.main != "undefined") ? (
         <Card weather={weather} weather2={weather2} />
-      ) : ('')}
+      ) : null}
 
     </div>
 
