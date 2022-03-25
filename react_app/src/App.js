@@ -12,21 +12,19 @@ const api = {
 function App() {
 
   const [query, setQuery] = useState('');
-  const [weather, setWeather] = useState({});
-  const [weather2, setWeather2] = useState({});
+  const [weatherCurrent, setWeatherCurrent] = useState({});
+  const [weatherDaily, setWeatherDaily] = useState({});
   
   const search = evt => {
     fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
       .then(res => res.json())
       .then(result => {
-        setWeather(result);
-        console.log(result);
+        setWeatherCurrent(result);
         if (result.cod === 200) {
           fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
             .then(res2 => res2.json())
             .then(result2 => {
-              console.log(result2)
-              setWeather2(result2);
+              setWeatherDaily(result2);
               setQuery('');
             })
         }
@@ -54,15 +52,7 @@ function App() {
   }
 
   return (
-    // <div className={(typeof weather.main != "undefined") ?
-    //   (weather.weather[0].main === "Clouds" ? 'App clouds' :
-    //     (weather.weather[0].main === "Clear" ? 'App clear' :
-    //       (weather.weather[0].main === "Rain" ? 'App rain' :
-    //         (weather.weather[0].main === "Snow" ? 'App snow' :
-    //           (weather.weather[0].main === "Thunderstorm" ? 'App thunderstorm' :
-    //             (weather.weather[0].main === "Fog" ? 'App fog' : 'App'))))))
-    //   : 'App'}>
-    <div className={(typeof weather.main != "undefined") ? `App ${weather.weather[0].main}` : 'App'}>
+    <div className={(typeof weatherCurrent.main != "undefined") ? `App ${weatherCurrent.weather[0].main}` : 'App'}>
       <main>
         <div className="current">
           <Clock format={'hh-mm'} />
@@ -85,21 +75,21 @@ function App() {
             <button type="button" className="btn" onClick={search}>Search</button>
           </div>
         </div>
-        {(typeof weather.main != "undefined") ? (
+        {(typeof weatherCurrent.main != "undefined") ? (
           <div>
             <div className='current'>
               <div className='location'>
                 <center>
-                  {weather.name}, {weather.sys.country}
+                  {weatherCurrent.name}, {weatherCurrent.sys.country}
                 </center>
               </div>
               <div className='current-temp'>
-                <center>{Math.round(weather.main.temp)}&#176;F</center>
+                <center>{Math.round(weatherCurrent.main.temp)}&#176;F</center>
               </div>
               <div className='current-description'>
-                <center>{toTitleCase(weather.weather[0].description)}</center>
+                <center>{toTitleCase(weatherCurrent.weather[0].description)}</center>
                 <div className='icon'>
-                  <center><img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} /></center>
+                  <center><img src={`http://openweathermap.org/img/w/${weatherCurrent.weather[0].icon}.png`} /></center>
                 </div>
               </div>
               <center>
@@ -108,19 +98,19 @@ function App() {
                   <div className="current-info">
                     <div className="feels">
                       <span id="current-conditions">
-                        {Math.round(weather.main.feels_like)}&#176;F
+                        {Math.round(weatherCurrent.main.feels_like)}&#176;F
                       </span>
                       <p>Feels Like</p>
                     </div>
                     <div className="humidity">
                       <span id="current-conditions">
-                        {Math.round(weather.main.humidity)}%
+                        {Math.round(weatherCurrent.main.humidity)}%
                       </span>
                       <p>Humidity</p>
                     </div>
                     <div className="wind">
                       <span id="current-conditions">
-                        {Math.round(weather.wind.speed)} mph
+                        {Math.round(weatherCurrent.wind.speed)} mph
                       </span>
                       <p>Wind</p>
                     </div>
@@ -137,8 +127,8 @@ function App() {
           </div>
         ) : null}
       </main>
-      {(typeof weather.main != "undefined") ? (
-        <Card weather={weather} weather2={weather2} />
+      {(typeof weatherCurrent.main != "undefined") ? (
+        <Card weatherCurrent={weatherCurrent} weatherDaily={weatherDaily} />
       ) : null}
 
     </div>
