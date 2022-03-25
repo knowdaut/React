@@ -2,6 +2,7 @@ import Clock from "./Clock";
 import Card from './Cards.js'
 import React, { useState} from "react";
 
+
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
   base: "https://api.openweathermap.org/data/2.5/"
@@ -130,7 +131,6 @@ function App() {
       {(typeof weatherCurrent.main != "undefined") ? (
         <Card weatherCurrent={weatherCurrent} weatherDaily={weatherDaily} />
       ) : null}
-
     </div>
 
   );

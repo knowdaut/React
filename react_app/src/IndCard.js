@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { Collapse, Card, CardBody, CardText, CardTitle, Col } from 'reactstrap';
+import { Collapse, Card, CardBody, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
+// import Chevron from "./Chevron.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
 import TextForCards from "./TextForCards";
@@ -7,7 +8,6 @@ import TextForCards from "./TextForCards";
 
 
 const IndCard = (props) => {
-    console.log(props)
     const {utcConverter, dayConverter, daily, toTitleCase}  = props;
     const [openState, setOpenState] = useState(false);
 

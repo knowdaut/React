@@ -1,6 +1,6 @@
-import React from "react";
-import {Container,} from 'reactstrap';
-// import Chevron from "./Chevron.js";
+import React, {useState} from "react";
+import {Container} from 'reactstrap';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
 import IndCard from "./IndCard";
@@ -15,6 +15,7 @@ function utcConverter(utcTime) {
 
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function dayConverter(dayNum) {
+    console.log(days[dayNum])
     return days[dayNum]
 }
 
@@ -26,10 +27,11 @@ function toTitleCase(str) {
 
 
 const Cards = (props) => {
+    console.log(props)
     const cardStorage = []
 
-    if (typeof props.weather2 != "undefined" && props.weather2.daily) {
-        props.weather2.daily.forEach((daily, index) => {
+    if (typeof props.weatherDaily != "undefined" && props.weatherDaily.daily) {
+        props.weatherDaily.daily.forEach((daily, index) => {
             if (index > 0 && index < 6) {
                 cardStorage.push(
                     <IndCard key={index} utcConverter={utcConverter} dayConverter={dayConverter} daily={daily} toTitleCase={toTitleCase}/>
@@ -49,3 +51,7 @@ const Cards = (props) => {
 
 
 export default Cards;
+
+
+
+
