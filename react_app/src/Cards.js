@@ -15,7 +15,6 @@ function utcConverter(utcTime) {
 
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function dayConverter(dayNum) {
-    console.log(days[dayNum])
     return days[dayNum]
 }
 
