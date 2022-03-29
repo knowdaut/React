@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Collapse, Card, CardBody, CardText, CardTitle, Container, Row, Col } from 'reactstrap';
+import React, { useState } from "react";
+import { Collapse, Card, CardBody, CardText, CardTitle, Col } from 'reactstrap';
 // import Chevron from "./Chevron.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
@@ -8,27 +8,24 @@ import TextForCards from "./TextForCards";
 
 
 const IndCard = (props) => {
-    const {utcConverter, dayConverter, daily, toTitleCase}  = props;
+    const { utcConverter, dayConverter, daily } = props;
     const [openState, setOpenState] = useState(false);
 
-    return(
+    return (
         <Col>
             <Card key="firstCard"
                 tabIndex={0}
                 onClick={() => setOpenState(!openState)}>
                 <CardBody>
                     <CardTitle>
-                        {dayConverter(utcConverter(daily.dt))}
-                        <span id="forecast-icon">
-                            {(typeof props.weather2 != "undefined") && props.weather2.current ? <img src={`http://openweathermap.org/img/w/${daily.weather[0].icon}.png`} /> : " "}
-                        </span>
+                        <center>
+                            <div>
+                                {dayConverter(utcConverter(daily.dt))}
+                                <i key={openState} className={`fas ${openState ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ marginLeft: '5px' }} />
+                            </div>
+                            <img src={`http://openweathermap.org/img/w/${daily.weather[0].icon}.png`} id="forecast-icon" />
+                        </center>
                     </CardTitle>
-                    <div>
-                            <i key={openState} className={`fas ${openState ? 'fa-chevron-up' : 'fa-chevron-down'}`}/>
-                            {toTitleCase(daily.weather[0].description)}
-                            {Math.round(daily.temp.day)}&#176;F
-
-                    </div>
                     <Collapse isOpen={openState} className="my-2">
                         <CardText>
                             <TextForCards cardNum={1} daily={daily} />

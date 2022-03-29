@@ -19,11 +19,7 @@ function dayConverter(dayNum) {
     return days[dayNum]
 }
 
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function (txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
+
 
 
 const Cards = (props) => {
@@ -34,7 +30,7 @@ const Cards = (props) => {
         props.weatherDaily.daily.forEach((daily, index) => {
             if (index > 0 && index < 6) {
                 cardStorage.push(
-                    <IndCard key={index} utcConverter={utcConverter} dayConverter={dayConverter} daily={daily} toTitleCase={toTitleCase}/>
+                    <IndCard key={index} utcConverter={utcConverter} dayConverter={dayConverter} daily={daily} />
                 )
             }
         })

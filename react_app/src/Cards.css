@@ -29,7 +29,7 @@
 
 .card-body{
     margin: 0px;
-    justify-content: center;
+    
 }
 
 .card-title{
@@ -40,15 +40,32 @@
     padding: 0px;
 }
 
-img{
-    height: 50px;
-    width: auto;
-  }
-
-.arrow{
-    margin-left: 2px;
+#forecast-icon{
+    height: auto;
+    width: 35px;
 }
-.rotate-arrow{
-    margin-left: 2px;
-    transform:rotate(90deg);
+
+.five-day-forecast{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.forecast-description{
+  color: rgb(0, 0, 0, 0.7);
+  font-weight: bold;
+  font-size: 110%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#daily-conditions-info{
+  color: rgb(0, 0, 0, 0.6);
+  font-family: 'Varela Round';
+  font-size: 120%;
+  font-weight: bold;
+  
 }
