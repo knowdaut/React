@@ -1,9 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import Cards from './Cards';
+import { utcConverter } from './Cards.js';
 
-test('making sure utcConverter returns a number 0-7', () => { 
-    render(<Cards/>)
-    
-    
-
+test('should return number 0-7', () => {
+    const utcTest = utcConverter(1648575895);
+    expect(utcTest).toBe(2);
 })
