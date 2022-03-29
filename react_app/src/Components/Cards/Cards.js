@@ -4,19 +4,11 @@ import {Container} from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
 import IndCard from "../IndCard/IndCard";
-
-function utcConverter(utcTime) {
-    const d = new Date(0);
-    d.setUTCSeconds(utcTime)
-    const d2 = d.getDay()
-    return d2;
-}
+import {utcConverter, dayConverter} from '../../Utils/Converters.js';
 
 
-const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-function dayConverter(dayNum) {
-    return days[dayNum]
-}
+
+
 
 
 
