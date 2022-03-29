@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Collapse, Card, CardBody, CardText, CardTitle, Col } from 'reactstrap';
 // import Chevron from "./Chevron.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Cards.css";
-import TextForCards from "./TextForCards";
+import "../Cards/Cards.css";
+import TextForCards from "../../TextForCards";
 
 
 

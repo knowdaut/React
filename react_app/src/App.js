@@ -1,5 +1,5 @@
 import Clock from "./Clock";
-import Card from './Cards.js'
+import Card from "./Components/Cards/Cards"
 import TempChart from './TempChart'
 import React, { useState} from "react";
 

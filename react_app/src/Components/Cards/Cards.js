@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import {Container} from 'reactstrap';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Cards.css";
-import IndCard from "./IndCard";
+import IndCard from "../IndCard/IndCard";
 
 function utcConverter(utcTime) {
     const d = new Date(0);
@@ -22,7 +22,6 @@ function dayConverter(dayNum) {
 
 
 const Cards = (props) => {
-    console.log(props)
     const cardStorage = []
 
     if (typeof props.weatherDaily != "undefined" && props.weatherDaily.daily) {
