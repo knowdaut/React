@@ -6,14 +6,14 @@ import "./Cards.css";
 import IndCard from "./IndCard";
 
 function utcConverter(utcTime) {
-    var d = new Date(0);
+    const d = new Date(0);
     d.setUTCSeconds(utcTime)
-    var d2 = d.getDay()
+    const d2 = d.getDay()
     return d2;
 }
 
 
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 function dayConverter(dayNum) {
     return days[dayNum]
 }
