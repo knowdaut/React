@@ -87,12 +87,11 @@ const dailyWeather = {
     }],
     lat: 33.749,
     lon: -84.388,
-    minutely: [{dt: 1648595340, precipitation: 0}, {dt: 1648595400, precipitation: 0},…],
+    minutely: [{dt: 1648595340, precipitation: 0}, {dt: 1648595400, precipitation: 0}],
     timezone: "America/New_York",
     timezone_offset: -14400
 }
-test('loading home page', () => {
-  render(<Cards weatherCurrent={weatherCurrent} />);
-  const linkElement = screen.getByText(/My React App/i);
-  expect(linkElement).toBeInTheDocument();
+test('should render a card', () => {
+  render(<Cards dailyWeather={dailyWeather} />);
+
 });
