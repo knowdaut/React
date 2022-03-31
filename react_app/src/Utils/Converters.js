@@ -9,3 +9,9 @@ export const dayConverter = (dayNum) => {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     return days[dayNum]
 }
+
+export const toTitleCase = (str) => {
+    return str.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}

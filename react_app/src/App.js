@@ -1,6 +1,6 @@
-import Clock from "./Clock";
-import Card from "./Components/Cards/Cards"
-import TempChart from './TempChart'
+import Clock from "./Components/Clock";
+import Card from "./Components/Cards"
+import TempChart from './Components/TempChart'
 import React, { useState} from "react";
 
 
@@ -64,7 +64,7 @@ function App() {
             </center>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
           <div className="input-group">
             <input type="search"
               className="form-control"

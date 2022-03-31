@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
 import WebFont from 'webfontloader';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './CSS/App.css';
 
 
 

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Cards from '../Components/Cards/Cards';
+import Cards from '../Components/Cards';
 
 const weatherCurrent = {
     base: "stations",

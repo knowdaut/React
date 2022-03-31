@@ -1,16 +1,9 @@
 import React from "react";
 import {Container} from 'reactstrap';
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Cards.css";
-import IndCard from "../IndCard/IndCard";
-import {utcConverter, dayConverter} from '../../Utils/Converters.js';
-
-
-
-
-
-
+import "../CSS/Cards.css";
+import IndCard from "./IndCard";
+import {utcConverter, dayConverter} from '../Utils/Converters.js';
 
 
 const Cards = (props) => {

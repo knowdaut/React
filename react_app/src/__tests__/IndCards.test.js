@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import IndCard from '../Components/IndCard/IndCard';
+import IndCard from '../Components/IndCard';
 
 // const weatherCurrent = {
 //     base: "stations",

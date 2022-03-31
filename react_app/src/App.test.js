@@ -3,6 +3,6 @@ import App from './App';
 
 test('loading home page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/My React App/i);
+  const linkElement = screen.getByText(/Search/i);
   expect(linkElement).toBeInTheDocument();
 });
