@@ -91,7 +91,7 @@ function App() {
               <div className='current-description'>
                 <center>{toTitleCase(weatherCurrent.weather[0].description)}</center>
                 <div className='icon'>
-                  <center><img src={`http://openweathermap.org/img/w/${weatherCurrent.weather[0].icon}.png`} /></center>
+                  <center><img src={`http://openweathermap.org/img/w/${weatherCurrent.weather[0].icon}.png`} alt="" /></center>
                 </div>
               </div>
               <center>

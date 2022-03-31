@@ -21,7 +21,7 @@ const IndCard = (props) => {
                                 {dayConverter(utcConverter(daily.dt))}
                                 <i key={openState} className={`fas ${openState ? 'fa-chevron-up' : 'fa-chevron-down'}`} style={{ marginLeft: '5px' }} />
                             </div>
-                            <img src={`http://openweathermap.org/img/w/${daily.weather[0].icon}.png`} id="forecast-icon" />
+                            <img src={`http://openweathermap.org/img/w/${daily.weather[0].icon}.png`} id="forecast-icon" alt="" />
                         </center>
                     </CardTitle>
                     <Collapse isOpen={openState} className="my-2">
