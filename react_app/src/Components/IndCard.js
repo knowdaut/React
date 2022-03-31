@@ -11,7 +11,7 @@ const IndCard = (props) => {
 
     return (
         <Col>
-            <Card key="firstCard"
+            <Card className="indCards" key="firstCard"
                 tabIndex={0}
                 onClick={() => setOpenState(!openState)}>
                 <CardBody>

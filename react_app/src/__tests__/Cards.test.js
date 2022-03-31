@@ -95,3 +95,8 @@ test('should render a card', () => {
   render(<Cards dailyWeather={dailyWeather} />);
 
 });
+
+test('if statement test', () => {
+    render(<Cards dailyWeather={dailyWeather} />);
+  
+  });
