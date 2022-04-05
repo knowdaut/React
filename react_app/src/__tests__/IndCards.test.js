@@ -1,5 +1,7 @@
-import { render } from '@testing-library/react';
+import { screen, render } from "@testing-library/react";
 import IndCard from '../Components/IndCard';
+import React from "react";
+import userEvent from "@testing-library/user-event";
 
 // const weatherCurrent = {
 //     base: "stations",
@@ -61,11 +63,11 @@ test('should render a card', () => {
 });
 
 test('use state test', () => {
-    const wrapper = render(<IndCard daily={daily} utcConverter={jest.fn()} dayConverter={jest.fn()} />);
-    const click = wrapper.getElementsByClassName("indCards");
-    
-
-  
-  });
+  render(<IndCard daily={daily} utcConverter={jest.fn()} dayConverter={jest.fn()} />);
+  expect(screen.getByRole('button')).toHaveClass('closed')
+  const button = screen.getByRole('button');
+  userEvent.click(button);
+  expect(screen.getByRole('button')).toHaveClass('open')
+});
 
 
