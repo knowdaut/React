@@ -44,6 +44,7 @@ p{
   font-family: 'Varela Round';
   font-size: xx-large;
   padding: 20px;
+  color: white;
 }
 .current .location{
   font-family: 'Varela Round';
@@ -150,5 +151,4 @@ img{
   background-color: rgb(255, 255, 255, 0.6);
   color: rgb(0, 0, 0, 0.6)
 }
-
 

@@ -57,7 +57,7 @@ function App() {
     <div className={(typeof weatherCurrent.main != "undefined") ? `App ${weatherCurrent.weather[0].main}` : 'App'}>
       <main>
         <div className="current">
-          <Clock format={'hh-mm'} />
+          <center><Clock /></center>
           <div className="date">
             <center>
               {dateBuilder(new Date())}
