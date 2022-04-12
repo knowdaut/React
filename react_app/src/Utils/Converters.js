@@ -15,3 +15,18 @@ export const toTitleCase = (str) => {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 }
+
+
+export const dateBuilder = (d) => {
+    const months = ["January", "February", "March", "April", "May", "June", "July",
+      "August", "September", "October", "November", "December"];
+
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+    const fullDate = `${date} ${month} ${year}`
+
+
+    return fullDate;
+  }
+

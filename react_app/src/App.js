@@ -1,8 +1,7 @@
 import Clock from "./Components/Clock";
 import Card from "./Components/Cards"
-import TempChart from './Components/TempChart'
 import React, { useState} from "react";
-
+import {toTitleCase, dateBuilder} from './Utils/Converters.js';
 
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
@@ -12,7 +11,6 @@ const api = {
 
 
 function App() {
-
   const [query, setQuery] = useState('');
   const [weatherCurrent, setWeatherCurrent] = useState({});
   const [weatherDaily, setWeatherDaily] = useState({});
@@ -31,26 +29,6 @@ function App() {
             })
         }
       });
-  }
-
-  const dateBuilder = (d) => {
-    const months = ["January", "February", "March", "April", "May", "June", "July",
-      "August", "September", "October", "November", "December"];
-
-    let date = d.getDate();
-    let month = months[d.getMonth()];
-    let year = d.getFullYear();
-
-
-    return `${date} ${month} ${year}`
-
-
-  }
-
-  function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function (txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
   }
 
   return (
