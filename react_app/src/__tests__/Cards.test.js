@@ -67,6 +67,120 @@ const dailyWeather = {
         wind_deg: 143,
         wind_gust: 24.56,
         wind_speed: 8.05,
+    },{
+        clouds: 80,
+        dew_point: 35.22,
+        dt: 1648573200,
+        feels_like: {day: 65.12, night: 64.54, eve: 71.44, morn: 50.47},
+        humidity: 30,
+        moon_phase: 0.91,
+        moonrise: 1648549260,
+        moonset: 1648589160,
+        pop: 0,
+        pressure: 1021,
+        sunrise: 1648553335,
+        sunset: 1648598124,
+        temp: {day: 67.28, min: 51.78, max: 73.18, night: 65.7, eve: 72.64, morn: 53.74},
+        uvi: 6.95,
+        weather: [{id: 803, main: "Clouds", description: "broken clouds", icon: "04d"}],
+        wind_deg: 143,
+        wind_gust: 24.56,
+        wind_speed: 8.05,
+    },{
+        clouds: 80,
+        dew_point: 35.22,
+        dt: 1648573200,
+        feels_like: {day: 65.12, night: 64.54, eve: 71.44, morn: 50.47},
+        humidity: 30,
+        moon_phase: 0.91,
+        moonrise: 1648549260,
+        moonset: 1648589160,
+        pop: 0,
+        pressure: 1021,
+        sunrise: 1648553335,
+        sunset: 1648598124,
+        temp: {day: 67.28, min: 51.78, max: 73.18, night: 65.7, eve: 72.64, morn: 53.74},
+        uvi: 6.95,
+        weather: [{id: 803, main: "Clouds", description: "broken clouds", icon: "04d"}],
+        wind_deg: 143,
+        wind_gust: 24.56,
+        wind_speed: 8.05,
+    },{
+        clouds: 80,
+        dew_point: 35.22,
+        dt: 1648573200,
+        feels_like: {day: 65.12, night: 64.54, eve: 71.44, morn: 50.47},
+        humidity: 30,
+        moon_phase: 0.91,
+        moonrise: 1648549260,
+        moonset: 1648589160,
+        pop: 0,
+        pressure: 1021,
+        sunrise: 1648553335,
+        sunset: 1648598124,
+        temp: {day: 67.28, min: 51.78, max: 73.18, night: 65.7, eve: 72.64, morn: 53.74},
+        uvi: 6.95,
+        weather: [{id: 803, main: "Clouds", description: "broken clouds", icon: "04d"}],
+        wind_deg: 143,
+        wind_gust: 24.56,
+        wind_speed: 8.05,
+    },{
+        clouds: 80,
+        dew_point: 35.22,
+        dt: 1648573200,
+        feels_like: {day: 65.12, night: 64.54, eve: 71.44, morn: 50.47},
+        humidity: 30,
+        moon_phase: 0.91,
+        moonrise: 1648549260,
+        moonset: 1648589160,
+        pop: 0,
+        pressure: 1021,
+        sunrise: 1648553335,
+        sunset: 1648598124,
+        temp: {day: 67.28, min: 51.78, max: 73.18, night: 65.7, eve: 72.64, morn: 53.74},
+        uvi: 6.95,
+        weather: [{id: 803, main: "Clouds", description: "broken clouds", icon: "04d"}],
+        wind_deg: 143,
+        wind_gust: 24.56,
+        wind_speed: 8.05,
+    },{
+        clouds: 80,
+        dew_point: 35.22,
+        dt: 1648573200,
+        feels_like: {day: 65.12, night: 64.54, eve: 71.44, morn: 50.47},
+        humidity: 30,
+        moon_phase: 0.91,
+        moonrise: 1648549260,
+        moonset: 1648589160,
+        pop: 0,
+        pressure: 1021,
+        sunrise: 1648553335,
+        sunset: 1648598124,
+        temp: {day: 67.28, min: 51.78, max: 73.18, night: 65.7, eve: 72.64, morn: 53.74},
+        uvi: 6.95,
+        weather: [{id: 803, main: "Clouds", description: "broken clouds", icon: "04d"}],
+        wind_deg: 143,
+        wind_gust: 24.56,
+        wind_speed: 8.05,
+    },{
+        clouds: 80,
+        dew_point: 35.22,
+        dt: 1648573200,
+        feels_like: {day: 65.12, night: 64.54, eve: 71.44, morn: 50.47},
+        humidity: 30,
+        moon_phase: 0.91,
+        moonrise: 1648549260,
+        moonset: 1648589160,
+        pop: 0,
+        pressure: 1021,
+        sunrise: 1648553335,
+        sunset: 1648598124,
+        temp: {day: 67.28, min: 51.78, max: 73.18, night: 65.7, eve: 72.64, morn: 53.74},
+        uvi: 6.95,
+        weather: [{id: 803, main: "Clouds", description: "broken clouds", icon: "04d"}],
+        wind_deg: 143,
+        wind_gust: 24.56,
+        wind_speed: 8.05,
     }],
     hourly: 
     [{
@@ -91,12 +205,21 @@ const dailyWeather = {
     timezone: "America/New_York",
     timezone_offset: -14400
 }
+
+
 test('should render a card', () => {
-  render(<Cards dailyWeather={dailyWeather} />);
+  render(<Cards weatherDaily={dailyWeather} />);
 
 });
 
 test('if statement test', () => {
-    render(<Cards dailyWeather={dailyWeather} />);
+    render(<Cards/>);
   
   });
+
+test('if statement test', () => {
+    render(<Cards weatherDaily={weatherCurrent}/>);
+  
+});
+
+
