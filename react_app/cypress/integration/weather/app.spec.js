@@ -32,8 +32,10 @@ describe('example to-do app', () => {
     cy.get(".card-title").should('be.visible')
     cy.get("#forecast-icon").should('be.visible')
     cy.get(".fas.fa-chevron-down").should('be.visible')
-    // cy.get(".indCards closed card").should('be.visible')
-    // pull the first element from array and click on just the first one
+    cy.get('.indCards.closed.card').click({ multiple: true })
+    cy.get(".indCards.open .five-day-forecast").should('have.length', 5)
+    cy.get('.indCards.open.card').click({ multiple: true })
+    cy.get(".fas.fa-chevron-down").should('be.visible')
   })
 
 })
