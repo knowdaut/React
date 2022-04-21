@@ -20,7 +20,7 @@ function App() {
       .then(res => res.json())
       .then(result => {
         setWeatherCurrent(result);
-        try{
+        if (result.cod === 200){
           let notify = document.getElementById("err");
           notify.style.display = "none";
           fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
@@ -29,7 +29,7 @@ function App() {
               setWeatherDaily(result2);
               setQuery('');
             })
-        } catch {
+        } else {
           let notify = document.getElementById("err");
           notify.innerHTML = "Please enter a valid city name";
           notify.style.display = "block";
@@ -40,7 +40,7 @@ function App() {
   return (
     <div className={(typeof weatherCurrent.main != "undefined") ? `App ${weatherCurrent.weather[0].main}` : 'App'}>
       <main>
-        <div id="err"></div>
+      <center><div id="err"></div></center>
         <div className="current">
           <center><Clock /></center>
           <div className="date">
