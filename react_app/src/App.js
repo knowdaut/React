@@ -1,7 +1,7 @@
 import Clock from "./Components/Clock";
 import Card from "./Components/Cards"
-import React, { useState} from "react";
-import {toTitleCase, dateBuilder} from './Utils/Converters.js';
+import React, { useState } from "react";
+import { toTitleCase, dateBuilder } from './Utils/Converters.js';
 
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
@@ -14,19 +14,25 @@ function App() {
   const [query, setQuery] = useState('');
   const [weatherCurrent, setWeatherCurrent] = useState({});
   const [weatherDaily, setWeatherDaily] = useState({});
-  
+
   const search = evt => {
     fetch(`${api.base}weather?q=${query}&units=imperial&APPID=${api.key}`)
       .then(res => res.json())
       .then(result => {
         setWeatherCurrent(result);
-        if (result.cod === 200) {
+        try{
+          let notify = document.getElementById("err");
+          notify.style.display = "none";
           fetch(`${api.base}onecall?lat=${result.coord.lat}&lon=${result.coord.lon}&units=imperial&appid=${api.key}`)
             .then(res2 => res2.json())
             .then(result2 => {
               setWeatherDaily(result2);
               setQuery('');
             })
+        } catch {
+          let notify = document.getElementById("err");
+          notify.innerHTML = "Please enter a valid city name";
+          notify.style.display = "block";
         }
       });
   }
@@ -34,6 +40,7 @@ function App() {
   return (
     <div className={(typeof weatherCurrent.main != "undefined") ? `App ${weatherCurrent.weather[0].main}` : 'App'}>
       <main>
+        <div id="err"></div>
         <div className="current">
           <center><Clock /></center>
           <div className="date">
@@ -103,7 +110,7 @@ function App() {
             <div id="conditions-info">
               <center><span id="xl-font">5 Day Forecast</span></center>
             </div>
-            
+
           </div>
         ) : null}
       </main>

@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 
 
-describe('example to-do app', () => {
+describe('weather app', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
   })
 
-  it('displays two todo items by default', () => {
+  it('displays weather app', () => {
     cy.get(".clock").should('be.visible')
     cy.get(".date").should('be.visible')
     cy.get(".input-group").should('be.visible')
@@ -36,6 +36,16 @@ describe('example to-do app', () => {
     cy.get(".indCards.open .five-day-forecast").should('have.length', 5)
     cy.get('.indCards.open.card').click({ multiple: true })
     cy.get(".fas.fa-chevron-down").should('be.visible')
+  })
+
+  it('displays error message', () => {
+    cy.get(".clock").should('be.visible')
+    cy.get(".date").should('be.visible')
+    cy.get(".input-group").should('be.visible')
+    cy.get(".btn").should('be.visible')
+    cy.get(".form-control").type("$$$")
+    cy.get(".btn").click()
+    cy.get('#err').should('be.visible')
   })
 
 })
