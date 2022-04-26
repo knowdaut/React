@@ -51,7 +51,8 @@ function App() {
         </div>
         <div className="d-flex justify-content-center">
           <div className="input-group">
-            <input type="search"
+            <input role="search"
+              type="search"
               className="form-control"
               placeholder="Search"
               onChange={e => setQuery(e.target.value)}
