@@ -2,13 +2,19 @@ import Clock from "./Components/Clock";
 import Card from "./Components/Cards"
 import React, { useState } from "react";
 import { toTitleCase, dateBuilder } from './Utils/Converters.js';
+import WebFont from 'webfontloader';
+
 
 const api = {
   key: "af103c190cd36ff3f3fb1e0c135a2ee1",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
-
+WebFont.load({
+  google: {
+    families: ['Varela Round', 'Lato']
+  }
+});
 
 function App() {
   const [query, setQuery] = useState('');

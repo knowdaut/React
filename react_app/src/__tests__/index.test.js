@@ -2,21 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../index.css';
 import App from '../App';
-import reportWebVitals from '../reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
-import WebFont from 'webfontloader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/App.css';
+import Index from '../index.js';
 
 
 
-jest.mock("react-dom", () => ({ render: jest.fn() }));
+// index.test.js
 
-describe("Application root", () => {
-  it("should render without crashing", () => {
-    const div = document.createElement("div");
-    div.id = "root";
-    document.body.appendChild(div);
-    expect(ReactDOM.render).toHaveBeenCalledWith(<App />, div);
-  });
+it('renders without crashing', () => {
+  expect(
+    JSON.stringify(
+      Object.assign({}, Index, { _reactInternalInstance: 'censored' }),
+    ),
+  ).toMatchSnapshot();
 });

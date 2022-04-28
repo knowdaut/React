@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Collapse, Card, CardBody, CardText, CardTitle, Col } from 'reactstrap';
+import { Collapse, Card, CardBody, CardTitle, Col } from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../CSS/Cards.css";
 import TextForCards from "./TextForCards";
@@ -23,9 +23,7 @@ const IndCard = (props) => {
                         </center>
                     </CardTitle>
                     <Collapse isOpen={openState} className="my-2">
-                        <CardText>
                             <TextForCards cardNum={1} daily={daily} />
-                        </CardText>
                     </Collapse>
                 </CardBody>
             </Card>
