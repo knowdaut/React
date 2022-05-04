@@ -8,9 +8,6 @@ import '../CSS/App.css';
 import Index from '../index.js';
 
 
-
-// index.test.js
-
 it('renders without crashing', () => {
   expect(
     JSON.stringify(
