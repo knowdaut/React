@@ -4,7 +4,7 @@ by Noah Daught and Tyler Wallace
 
 ## API info
 
-The Weather App utilizes a free version API, Open Weather Map, found at OpenWeatherMap.org.
+The Weather App utilizes a free version API, [Open Weather Map](https://openweathermap.org/).
 
 This API gives users access to realtime, future, and historical weather information for anywhere on the globe.
 
