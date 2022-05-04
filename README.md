@@ -10,7 +10,22 @@ This API gives users access to realtime, future, and historical weather informat
 
 ## About the App
 
+The Weather App allows users to search for weather information from any location in the world with data from the Open Weather Map API. A simple search for any city in the world will return the current weather conditions of location and a five-day forecast.
 
+**Technology Stack**
+
+Backend:
+
+Frontend:
+  - ReactJS
+  - Bootstrap
+  - Reactstrap
+  - JS
+  - CSS
+
+E2E Testing:
+  - Jest
+  - Cypress
 
 ## Run the App
 
