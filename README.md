@@ -1,10 +1,12 @@
 # Weather App
 
-by Noah Daught and Tyler Wallace
+by Nicholas Daut and Tyler Wallace
 
 ## API info
 
 The Weather App utilizes a free version API, [Open Weather Map](https://openweathermap.org/).
+
+The specific API used are Current Weather Data and One Call API.
 
 This API gives users access to realtime, future, and historical weather information for anywhere on the globe.
 
@@ -15,7 +17,10 @@ The Weather App allows users to search for weather information from any location
 **Technology Stack**
 
 Backend:
-
+  - React
+  - JavaScript
+  - HTML
+  
 Frontend:
   - ReactJS
   - Bootstrap
