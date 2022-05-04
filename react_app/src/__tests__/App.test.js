@@ -221,12 +221,6 @@ test("testing search functionality", () => {
   fireEvent.change(inputSearch, { target: { value: 'test' } })
 
   fireEvent.click(screen.getByRole('button'));
-  // expect(handleClick).toHaveBeenCalledTimes(1)
-
-  // render(<App/>);
-
-  // const inputSearch = screen.getByTestId("inputSearch");
-  // inputSearch.simulate(()=> "")
 
 });
 
