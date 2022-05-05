@@ -1,0 +1,54 @@
+.card-container{
+    width: 100%;
+}
+@media (min-width: 768px){
+    .card-container{
+      width: 50%;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px){
+    .card-container{
+      width: 100%;
+    }
+  }
+
+.card{
+    background-color: rgb(255, 255, 255, 0.6);
+    height: auto;
+    width: 100%;
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.card:focus{
+    border:5px solid rgb(0, 0, 255, 0.3)
+}
+
+.card-body{
+    margin: 0px;
+    justify-content: center;
+}
+
+.card-title{
+    color: rgb(0, 0, 0, 0.6);
+    font-family: 'Varela Round';
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+img{
+    height: 50px;
+    width: auto;
+  }
+
+.arrow{
+    margin-left: 2px;
+}
+.rotate-arrow{
+    margin-left: 2px;
+    transform:rotate(90deg);
+}
