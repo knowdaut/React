@@ -5,31 +5,30 @@
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  /* transition: background ease 10s; */
 }
 
-.App.clouds{
+.App.Clouds{
   background-image: url(/src/Backgrounds/clouds.gif);
 }
 
-.App.clear{
+.App.Clear{
   background-image: url(/src/Backgrounds/clear.gif), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
   background-blend-mode: overlay;
 }
 
-.App.rain{
+.App.Rain{
   background-image: url(/src/Backgrounds/rain.gif);
 }
 
-.App.snow{
+.App.Snow{
   background-image: url(/src/Backgrounds/snow.gif);
 }
 
-.App.thunderstorm{
+.App.Thunderstorm{
   background-image: url(/src/Backgrounds/thunderstorm.gif);
 }
 
-.App.fog{
+.App.Fog{
   background-image: url(/src/Backgrounds/fog.gif);
 }
 
@@ -45,6 +44,7 @@ p{
   font-family: 'Varela Round';
   font-size: xx-large;
   padding: 20px;
+  color: white;
 }
 .current .location{
   font-family: 'Varela Round';
@@ -152,4 +152,14 @@ img{
   color: rgb(0, 0, 0, 0.6)
 }
 
-
+#err {
+  display: none;
+  width: 50%;
+  background-color: rgb(255, 255, 255, 0.6);
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 5px;
+  color: rgb(0, 0, 0, 0.6);
+  font-weight: bold;
+}
